@@ -1,0 +1,46 @@
+h1 {
+color: #364e96;/*文字色*/
+padding: 0.5em 0;/*上下の余白*/
+border-top: solid 3px #364e96;/*上線*/
+border-bottom: solid 3px #364e96;/*下線*/
+}
+span{
+    color: #364e96;/*文字色*/
+    font:bold;
+}
+button {
+border: 8px double#364e96;
+background-color: #0786ed;
+color:white;
+margin:6px;
+border-radius: 50px;
+}
+#cate{
+    border-color: rgba(73, 28, 237, 0.888);
+    border-radius: 20px;
+    padding: 3px;
+}
+#calender{
+    border-color: rgba(73, 28, 237, 0.888);
+    border-radius: 20px;
+    padding: 3px;
+    text-align: center;
+}
+#price {
+    border: 2px solid rgba(73, 28, 237, 0.888);/* 枠線 */
+    border-radius: 10px;   /* 角丸 */
+    padding: 3px;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    width: 20%;             /* 横幅いっぱいにする */
+    box-sizing: border-box;  /* ※これがないと横にはみ出る */
+    font-size: 1em;          /* 文字サイズ */
+}
+#memo {
+    border: 2px solid rgba(73, 28, 237, 0.888);/* 枠線 */
+    border-radius: 10px;   /* 角丸 */
+    padding: 3px;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    width: 20%;             /* 横幅いっぱいにする */
+    box-sizing: border-box;  /* ※これがないと横にはみ出る */
+    font-size: 1em;          /* 文字サイズ */
+}

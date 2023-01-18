@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム</title>
+    <style>
+        h1 {
+        color: #364e96;/*文字色*/
+        padding: 0.5em 0;/*上下の余白*/
+        border-top: solid 3px #364e96;/*上線*/
+        border-bottom: solid 3px #364e96;/*下線*/
+        }
+        span{
+            color: #364e96;/*文字色*/
+            font:bold;
+        }
+        #pay{
+            border: 8px double#a20b0b;
+        background-color: #e03019;
+        color:white;
+        margin:6px
+        
+        }
+        #income {
+        border: 8px double#364e96;
+        background-color: #0786ed;
+        color:white;
+        margin:6px;
+       
+        }
+        #list {
+        border: 8px double#06934c;
+        background-color: #54efd8;
+        color:white;
+        margin:6px;
+        color:black;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+    <h1>家計簿アプリ</h1>
+    </header>
+    <span>家計簿を付ける</span><br>
+    <button onclick="location.href='input/pay.php'" id="pay">出金入力</button>
+    <button onclick="location.href='input/income.php'" id="income">入金入力</button><br>
+
+    <br>
+    <br>
+    <span>家計簿を見る</span><br>
+    <button onclick="location.href='setting/resarch.php'" id="list">出金簿</button>
+</body>
+</html>

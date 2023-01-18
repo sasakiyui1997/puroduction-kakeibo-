@@ -1,0 +1,49 @@
+create database kakeibo character set utf8;
+create table paycategory(
+id int auto_increment primary key,
+category varchar(10) not null);
+
+insert into paycategory values(null,"食費");
+insert into paycategory values(null,"外食費");
+insert into paycategory values(null,"日用品");
+insert into paycategory values(null,"交通費");
+insert into paycategory values(null,"衣服");
+insert into paycategory values(null,"交際費");
+insert into paycategory values(null,"趣味");
+insert into paycategory values(null,"その他");
+
+create table paylist(
+id int auto_increment primary key,
+date date not null,
+category int not null,
+price int not null,
+memo text);
+insert into paylist values(null,'2022-10-17',1,10000,"テスト"); 
+
+create table incomecategory(
+id int auto_increment primary key,
+category varchar(10) not null);
+
+insert into incomecategory values(null,"給料");
+insert into incomecategory values(null,"その他");
+create table incomelist(
+id int auto_increment primary key,
+date date not null,
+category int not null,
+price int not null,
+memo text);
+
+//paycategoryとpaylistをつなげたSQL文
+select date as '日付',paycategory.category as 'カテゴリー',price as '金額',memo as 'メモ' from paylist
+join paycategory on paylist.category = paycategory.id;
+select date ,paycategory.category ,price ,memo from paylist
+join paycategory on paylist.category = paycategory.id;
+
+select date ,paycategory.category ,price ,memo from paylist
+join paycategory on paylist.category = paycategory.id where paylist.category = 3 and date BETWEEN '2022-12-01' and '2022-12-31';
+
+select date ,incomecategory.category ,price ,memo from incomelist
+join incomecategory on incomelist.category = incomecategory.id where incomelist.category = 2 and date BETWEEN '2022-11-01' and '2022-11-30';
+
+select date ,incomecategory.category ,price ,memo from incomelist
+join incomecategory on incomelist.category = incomecategory.id where incomelist.category = 2 order by date;
